@@ -77,10 +77,9 @@ const zooAnimals = [
   */
 
   function lowerCaseNames(array){
-    const  namesLowerCase = [];
-    array.map(function(item){
-      namesLowerCase.push(item.animal_name.toLowerCase());
-    })
+    const namesLowerCase = array.map(function(item){
+      return item.animal_name.toLowerCase();
+    });
     return namesLowerCase;
   }
 
@@ -92,10 +91,14 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array){
+    const popLessThan5 = array.filter(function(item){
+      return item.population < 5;
+    });
+    return popLessThan5;
   }
   
+  console.log('T2R3', lowPopulationAnimals(zooAnimals));
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
