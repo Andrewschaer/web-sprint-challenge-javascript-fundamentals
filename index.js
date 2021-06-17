@@ -1,7 +1,7 @@
 //🚀🚀🚀  Topic #1 Closures 🚀🚀🚀//
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
 Study the code below and explain in your own words why nested function can access the variable internal. */
-// TEST TEST TEST for Codegrader-Github connection
+
 const external = "I'm outside the function";
 
 function myFunction() {
@@ -17,9 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
-
-
+// #The nested function 'nestedFunction' can access the variable 'internal' because the variable was defined in a outer scope.  JavaScript allows for variables to be accessed that are defined in a parent scope, but not in a child's or inner functions scope.  A closure occurs here when "nestedFunction" is invoked and reaches out of its own functional scope to read in the variable 'internal', which was defined in the outer scope (within the 'myFunction' function's scope), in order to console.log the 'internal' variable.
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
@@ -56,9 +54,15 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(array){
+    const displayNames = [];
+    array.forEach(function(item){
+      displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
+    });
+    return displayNames
   }
+
+  console.log('Task 2.1', animalNames(zooAnimals));
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
