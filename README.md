@@ -29,13 +29,37 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+    #Both `.forEach` and `.map` are array methods that serve as higher-level functions that use callback functions to access the items in the specified array.  These array methods, however, differ in their purpose and output. The `.forEach` array method loops over each item in an array to perform a specified action, but does not natively return a new array, while the `.map` array method allows you to use a function to easily manipulate the data in the specified array and in doing so, returns a brand new array with that manipulated data.
+
 2. Explain the difference between a callback and a higher order function.
+
+    #A higher order function is one that can receive other functions as a argument for that function.  A callback function, however, is one that you can pass into a separate function as a argument.
 
 3. Can you explain what a closure is and how you used it in the counter function? 
 
+    #A closure occurs when a nested function is invoked and reaches out of its own functional scope to a higher-level scope (for example a parent function or of the global scope) to read in and utilize a variable declared there.  I used a closure in writing the counter function within the for loop function.  When defining the parameters of i, the for loop I wrote specified that the loop should continue to run as long as i was less than the variable 'number'.  The variable 'number' was declared in a higher-level scope than the for loop function, so when the for loop reaches out of its own scope to read in that variable ('number'), a closure occurs. 
+
 4. Describe the four principles of the 'this' keyword.
 
+    1. Window Binding:
+
+      #Window binding occurs when using the "this" keyword when there is no additionally given context for what the "this" is referring to, therefore binding "this" at the highest scope level (global scope) to the window, which is an object containing all JS built-in functions, arrays and variable key-value pairs)
+    
+    2. Implicit Binding:
+
+      #Implicit binding occurs when using the "this" keyword in a function that is within an object.  Here we are implying that the "this" is referring to the object and we can therefore use object methods using the "dot" notation. The "this" must be used after the object being referred to is already referenced.
+
+    3. Explicit Binding
+
+      #Explicit binding occurs when using the ".call", ".apply" or ".bind" methods on existing functions that contain "this", in order to override what the "this" keyword points to.
+
+    4. New Binding
+
+      #New binding occurs when using constructor functions, where the "this" keyword is referencing the new object that is created by the constructor function.
+
 5. Why do we need super() in an extended class?
+
+    #We need to use `super()` when creating an extended class in order to pass attributes up to the parent object constructor function so that the any objects created with the extended class constructor are created with the same object keys.  Extended classes can have their own unique object keys, but `super()` ensures that they will also have the same keys as their parent class.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
@@ -60,22 +84,22 @@ Your finished project must include all of the following requirements
 #### Task A: Closure
 
 This challenge takes a look at closures as well as scope. 
-* [ ] Find this challenge in the index.js file. Read the instructions carefully!
+* [X] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task B: Objects and Arrays
 
 Test your knowledge of advanced array methods and callbacks.
-* [ ] Find this challenge in the index.js file. Read the instructions carefully!
+* [X] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task C: Prototypes
 
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
-* [ ] Find this challenge in the index.js file. Read the instructions carefully!
+* [X] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task D: Classes
 
 Once you have completed the prototypes challenge, it's time to convert all your hard work into classes.
-* Find this challenge in the index.js file. Read the instructions carefully!
+* [X] Find this challenge in the index.js file. Read the instructions carefully!
 
 In your solutions, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
